@@ -1,0 +1,27 @@
+
+.feed-historias {
+
+    &__header {
+        font-family: var(--font-m);
+        font-size: 5.2rem;
+        font-weight: 400;
+        margin-bottom: 4rem;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 3rem;
+        margin-bottom: 4rem;
+
+        @include respond(tab-port) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__btn-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

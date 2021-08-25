@@ -1,0 +1,192 @@
+
+@font-face {
+    font-family: 'MuseoModerno-Regular';
+    src:    url('fonts/MuseoModerno-Regular.eot');
+    src:    url('fonts/MuseoModerno-Regular.woff2') format('woff2'),
+            url('fonts/MuseoModerno-Regular.woff') format('woff'),
+            url('fonts/MuseoModerno-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MuseoModerno-Bold';
+    src:    url('fonts/MuseoModerno-Bold.eot');
+    src:    url('fonts/MuseoModerno-Bold.woff2') format('woff2'),
+            url('fonts/MuseoModerno-Bold.woff') format('woff'),
+            url('fonts/MuseoModerno-Bold.ttf') format('truetype');
+}
+
+.MuseuModerno-bold-132 {
+    font-family: var(--font-m);
+    font-size: 13.2rem;
+    font-weight: 700;
+}
+
+.MuseuModerno-regular-96 {
+    font-family: var(--font-m);
+    font-size: 9.6rem;
+}
+
+.MuseuModerno-bold-72 {
+    font-family: var(--font-m);
+    font-size: 7.2rem;
+    font-weight: 700;
+    line-height: 7.2rem;
+}
+
+.MuseuModerno-regular-72 {
+    font-family: var(--font-m);
+    font-size: 7.2rem;
+}
+
+.MuseuModerno-bold-56 {
+    font-family: var(--font-m-bold);
+    font-size: 5.6rem;
+}
+
+.MuseuModerno-bold-42 {
+    font-family: var(--font-m-bold);
+    font-size: 4.2rem;
+}
+
+.MuseuModerno-regular-42 {
+    font-family: var(--font-m);
+    font-size: 4.2rem;
+    line-height: 4.2rem;
+    font-weight: 200;
+}
+
+.MuseuModerno-regular-32 {
+    font-family: var(--font-m);
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+    font-weight: 300;
+}
+
+.MuseuModerno-bold-32 {
+    font-family: var(--font-m);
+    font-weight: 700;
+    font-size: 3.2rem;
+}
+
+.MuseuModerno-regular-24 {
+    font-family: var(--font-m);
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+}
+
+.MuseuModerno-bold-24 {
+    font-family: var(--font-m);
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+}
+
+.MuseuModerno-regular-16 {
+    font-family: var(--font-m);
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+.MuseuModerno-bold-16 {
+    font-family: var(--font-m);
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+
+
+.Poppins-bold-24 {
+    font-family: var(--font-p);
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.Poppins-regular-24 {
+    font-family: var(--font-p);
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+.Poppins-bold-18 {
+    font-family: var(--font-p);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.8rem;
+}
+
+.Poppins-regular-18 {
+    font-family: var(--font-p);
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.Poppins-regular-16 {
+    font-family: var(--font-p);
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.Poppins-bold-16 {
+    font-family: var(--font-p);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.Poppins-italic-14 {
+    font-family: var(--font-p);
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.Poppins-bold-14 {
+    font-family: var(--font-p);
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.Poppins-bold-italic-14 {
+    font-family: var(--font-p);
+    font-size: 1.4rem;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.Poppins-regular-14 {
+    font-family: var(--font-p);
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+
+.outline-text-2 {
+    color: var(--azulcefet);
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--azulcefet);
+}
+
+.outline-text-2-cinza {
+    color: var(--cinzafundo);
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--cinzafundo);
+}
+
+.text-upper {
+    text-transform: uppercase;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.color-cinza {
+    color: var(--cinzafundo);
+}
+
+a {
+    text-decoration: none;
+    color: var(--azulcefet);
+}

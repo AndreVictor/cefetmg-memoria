@@ -1,0 +1,50 @@
+.margin-t-auto {
+    margin-top: auto;
+}
+
+.margin-b-auto {
+    margin-bottom: auto;
+}
+
+.margin-r-auto {
+    margin-right: auto;
+}
+
+
+.m-t-32 {
+    margin-top: 3.2rem;
+}
+
+
+.m-b-8 {
+    margin-bottom: .8rem;
+}
+
+.m-b-16 {
+    margin-bottom: 1.6rem;
+}
+
+.m-b-32 {
+    margin-bottom: 3.2rem;
+}
+
+.m-b-64 {
+    margin-bottom: 6.4rem;
+}
+
+
+.m-r-32 {
+    margin-right: 3.2rem;
+}
+
+.m-r-16 {
+    margin-right: 1.6rem;
+}
+
+.container {
+    margin: 0 6rem;
+
+    @include respond(tab-port) {
+        margin: 0 2rem;
+    }
+}

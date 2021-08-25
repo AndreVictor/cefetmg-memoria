@@ -1,0 +1,244 @@
+.archiveEpocas {
+    @include margin-top;
+
+    @include respond(tab-port) {
+        margin-top: 30rem;
+    }
+
+    &__box {
+        display: flex;
+        width: max-content;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+
+    &__epoca-box {
+        @include padding-sides;
+        width: 80rem;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    }
+
+    &__epoca-header,
+    &__sub-header {
+        display: flex;
+        align-items: center;
+    }
+
+    &__sub-header {
+        h6{
+            flex: 1;
+        }
+    }
+
+    &__epoca-line {
+        flex: 1;
+        width: 100%;
+        height: 2px;
+        background-color: var(--azulcefet);
+        margin-left: auto;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        margin-top: auto;
+    }
+
+    &__gallery-box {
+        height: calc(100vh - 24rem);
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 1.6rem;
+        grid-auto-flow: column;
+
+        @include respond(tab-port) {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-auto-flow: row;
+            height: auto;
+            padding: 2rem;
+        }
+    }
+
+    &__img-box {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        p {
+            color: var(--cinzafundo) !important;
+            position: absolute;
+            bottom: -20%;
+            z-index: 2;
+            opacity: 0;
+            padding: 2rem;
+
+            transition: all .2s ease-in-out;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0rem;
+                left: 0rem;
+                width: 100%;
+                height: 100%;
+                background-color: var(--azulcefet);
+                z-index: -1;
+                opacity: 0;
+            }
+
+            @include respond(tab-port) {
+                opacity: 1;
+                bottom: 0;
+
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &:hover {
+            p {
+                bottom: 0;
+                opacity: 1;
+
+                &::after {
+                    opacity: .8
+                }
+            }
+
+            .archiveEpocas__img {
+                &::after,
+                &::before {
+                    top: -100%;
+                }
+            }
+        }
+    }
+
+    &__img {
+        width: 45rem;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        @include filter-img;
+
+        @include respond(tab-port) {
+            width: 100%;
+            height: 45rem;
+        }
+    }
+
+    ///////////////////////////////////////////// LINE /////////////////////////////////////////////
+
+    &__line-box {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: var(--cinzafundo);
+        position: fixed;
+        bottom: 2rem;
+        height: 10rem;
+        width: 100%;
+        
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 2px;
+            background-color: var(--azulcefet);
+            position: absolute;
+            top: 50%;
+            z-index: -1;
+        }
+
+        @include respond(tab-port) {
+            top: 10rem;
+            z-index: 2;
+        }
+    }
+
+    &__line-bullet {
+        cursor: pointer;
+        width: 1rem;
+        height: 1rem;
+        background-color:var(--azulcefet);
+        position: absolute;
+        top: -2.1rem;
+        left: 50%;
+        border-radius: 50%;
+        transform: translate(-50%, 0%);
+        transform-origin: 200% 50%;
+
+        transition: all .2s ease-in-out;
+
+        &--act {
+            &::before {
+                content: "";
+                width: 2.5rem;
+                height: 2.5rem;
+                border: 2px solid var(--azulcefet);
+                background-color: var(--cinzafundo);
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                transform: translate(-10%, -10%);
+                border-radius: 50%;
+    
+                transition: all .2s ease-in-out;
+            }
+
+            &::after {
+                content: "";
+                cursor: pointer;
+                width: 1rem;
+                height: 1rem;
+                background-color:var(--azulcefet);
+                border-radius: 50%;
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                transform: translate(50%, 50%);
+            }
+        }
+    }
+
+    &__line-entry {
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        transform: translateY(3.2rem);
+        position: relative;
+
+        transition: all .2s ease-in-out;
+
+        p {
+            padding: .2rem 1rem;
+            transition: all .2s ease-in-out;
+            color: var(--azulcefet);
+        }
+
+        &:hover {
+            div {
+                transform: scale(1.3);
+            }
+
+            p {
+                background-color: var(--azulcefet);
+                border-radius: 10rem;
+                color: var(--cinzafundo);
+            }
+        }
+    }
+}

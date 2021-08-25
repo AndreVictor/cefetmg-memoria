@@ -1,0 +1,40 @@
+.archiveRegistros {
+
+    &__box {
+        margin-top: 28rem;
+        @include padding-sides;
+        @include grid(3, 3.2rem);
+    }
+
+    &__header-menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        height: 10rem;
+        width: 100%;
+
+        background-color: var(--azulcefet);
+
+        position: fixed;
+        top: 10rem;
+        z-index: 4;
+    }
+
+    &__item-menu {
+        cursor: pointer;
+        padding: .5rem 1rem;
+        border: 2px solid var(--cinzafundo);
+        border-radius: 10rem;
+        color: var(--cinzafundo);
+        background-color: transparent;
+
+        transition: all .2s ease-in-out;
+
+        &:hover,
+        &--act {
+            background-color: var(--cinzafundo);
+            color: var(--azulcefet);
+        }
+    }
+}

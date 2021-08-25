@@ -1,0 +1,25 @@
+@keyframes blur {
+    from {
+        filter: blur(4px);
+        opacity: 0;
+    } to {
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+@keyframes left-to-right {
+    from {
+        left: -2000px;
+    } to {
+        left: 0;
+    }
+}
+
+@keyframes right-to-left {
+    from {
+        right: -2000px;
+    } to {
+        right: 0;
+    }
+}

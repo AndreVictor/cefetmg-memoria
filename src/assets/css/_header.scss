@@ -1,0 +1,237 @@
+
+.header {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    padding: 2rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: var(--cinzafundo);
+    opacity: .95;
+
+    &__menu-mobile-icon {
+        display: none;
+        cursor: pointer;
+        position: absolute;
+        top: 4.5rem;
+        right: 2rem;
+        background-color: var(--azulcefet);
+        width: 4.8rem;
+        height: 2px;
+
+        transition: all .2s;
+
+        &::after,
+        &::before {
+            content: '';
+            width: 4.8rem;
+            height: 2px;
+            background-color: var(--azulcefet);
+            position: absolute;
+            right: 0;
+
+            transition: all .2s;
+        }
+
+        &::after {
+            top: 1rem;
+        }
+
+        &::before {
+            top: -1rem;
+        }
+
+        &--act {
+            height: 0;
+
+            &::before {
+                transform: rotate(45deg);
+                top: 0;
+            }
+
+            &::after {
+                top: 0;
+                transform: rotate(-45deg);
+            }
+        }
+
+        @include respond(tab-port) {
+            display: block;
+        }
+    }
+
+    &__menu-box {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        transition: all .2s;
+
+        @include respond(tab-port) {
+            position: fixed;
+            top: 10rem;
+            left: -100%;
+            height: calc(100vh - 10rem);
+            background-color: var(--cinzafundo);
+            
+            flex-direction: column;
+        }
+
+        &--act {
+            left: 0;
+        }
+    }
+
+    &__logo-box {
+        text-decoration: none;
+        transition: all .2s;
+
+        &:hover {
+            opacity: 85%;
+        }
+    }
+
+    &__logo {
+        width: 20rem;
+        height: 3rem;
+        fill: var(--azulcefet);
+
+        @include respond(tab-port) {
+            width: 25rem;
+            height: 4rem;
+        }
+    }
+
+    &__menu {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__menu-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+
+    }
+
+    &__menu-item {
+        list-style: none;
+
+        transition: all .2s;
+
+        &:hover {
+            background-color: var(--azulcefet);
+            border-radius: 10rem;
+        }
+
+        @include respond(tab-port) {
+            &:not(:last-child) {
+                margin-bottom: 3.2rem;
+            }
+        }
+    }
+
+    &__menu-link {
+        text-decoration: none;
+        color: var(--azulcefet);
+        font-family: var(--font-m);
+        font-size: 1.6rem;
+
+        padding: .5rem 1rem;
+
+        transition: all .2s;
+
+        @include respond(tab-port) {
+            font-size: 2.4rem;
+        }
+
+    }
+}
+
+.search {
+
+    &__form {
+        display: flex;
+        justify-content: space-between;
+        border: var(--border-1);
+        padding: .2rem .2rem .2rem 1rem;
+        border-radius: 10rem;
+        height: 2.8rem;
+
+        @include respond(tab-port) {
+            height: 4.8rem;
+            padding: .4rem .2rem .2rem 2rem;
+            margin: 2rem;
+        }
+    }
+
+    &__input {
+        outline: none;
+        border: none;
+        width: 100%;
+        background: transparent;
+
+        font-family: var(--font-m);
+        color: var(--azulcefet);
+        font-size: 1.4rem;
+        text-transform: uppercase;
+
+        &::placeholder {
+            font-family: var(--font-m);
+            color: var(--azulcefet);
+            font-size: 1.4rem;
+            text-transform: uppercase;
+
+            @include respond(tab-port) {
+                font-size: 2.4rem;
+            }
+        }
+
+    }
+
+    &__icon {
+        align-self: center;
+        width: 1.9rem;
+        height: 2rem;
+        fill: var(--azulcefet);
+        margin-right: .8rem;
+    }
+
+    &__btn {
+        border:none;
+        background-color: transparent;
+    }
+
+}
+
+.header__menu-item:hover .header__menu-link:hover {
+    color: var(--cinzafundo);
+}
+
+
+.transition {
+    display:flex;
+    position: absolute;
+    z-index: 10;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    pointer-events: none;
+
+    li {
+        transform: scaleY(0);
+        background-color: var(--azulcefet);
+        width: 25%;
+    }
+}

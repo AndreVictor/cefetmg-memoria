@@ -1,0 +1,43 @@
+.btn {
+    font-family: var(--font-m);
+    font-size: 2.4rem;
+    font-weight: 400;
+    
+    border-radius: 10rem;
+    text-decoration: none;
+    padding: .5rem 2rem;
+
+    &--azul {
+        background-color: var(--azulcefet);
+        color: var(--cinzafundo);
+        border: var(--border-1-transparente);
+        transition: all .2s;
+
+        &:hover {
+            background-color: var(--cinzafundo);
+            color: var(--azulcefet);
+            border: var(--border-1)
+        }
+    }
+
+    &--cinza {
+        background-color: var(--cinzafundo);
+        color: var(--azulcefet);
+        border: var(--border-1);
+        transition: all .2s;
+
+        &:hover {
+            background-color: var(--azulcefet);
+            color: var(--cinzafundo) !important;
+            border: var(--border-1-transparente)
+        }
+    }
+
+    &--cinza a:hover {
+        color: var(--cinzafundo);
+    }
+
+    &--small {
+        font-size: 1.6rem;
+    }
+}
