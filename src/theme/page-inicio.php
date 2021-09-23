@@ -214,7 +214,7 @@
 				?>
         </div>
         <div class="feed-historias__btn-box">
-          <a href="#" class="btn btn--azul">Ver mais</a>
+          <a href="<?php echo get_post_type_archive_link( 'registros' ); ?>" class="btn btn--azul">Ver mais</a>
         </div>
       </section>
 

@@ -23,7 +23,7 @@
             A exposição <em>Memória CEFET-MG: espaços, trajetórias e práticas</em> é uma iniciativa do Departamento de História (DHIS) com o objetivo de divulgar documentos e imagens relacionadas à história de nossa instituição, em parceria com a Diretoria Geral (DG) e a Coordenação de Arquivo e Memória Institucional (ARQMI). 
             </div>
 
-            <a href="<?php echo get_permalink( get_page_by_path( 'inicio' ) ) ?>" class="inicialPage__btn btn btn--azul text-upper">
+            <a href="<?php echo get_permalink( get_page_by_path( 'inicio' ) ) ?>" class="inicialPage__btn btn btn--azul text-upper classe-teste">
               Entrar na exposição
             </a>
 
